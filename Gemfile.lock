@@ -311,7 +311,7 @@ DEPENDENCIES
   cssbundling-rails (~> 1.2)
   debug
   devise (~> 4.9)
-  font-awesome-sass (~> 6.5.1)
+  font-awesome-sass (~> 6.2)
   importmap-rails
   jbuilder
   puma (>= 5.0)
