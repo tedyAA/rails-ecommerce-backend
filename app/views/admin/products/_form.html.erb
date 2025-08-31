@@ -25,16 +25,23 @@
     <%= form.label :price %>
     <%= form.number_field :price, class: ["block shadow-sm rounded-md border px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": admin_product.errors[:price].none?, "border-red-400 focus:outline-red-600": admin_product.errors[:price].any?}] %>
   </div>
-
-<div class="my-5">
-    <% if admin_product.images.any? %>
-      <% admin_product.images.each do |image| %>
-        <%= image_tag image, class: "w-20 h-20 object-cover rounded-md" %>
-      <% end %>
-    <% end %>
-    <%= form.label :images %>
+<%= form.label :images %>
     <%= form.file_field :images, multiple: true, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+<% if admin_product.images.attached? %>
+  <div class="my-5 flex flex-wrap gap-3">
+    <% admin_product.images.each do |image| %>
+      <div class="relative w-20 h-20" data-image-id="<%= image.id %>">
+        <%= image_tag image, class: "w-full h-full object-cover rounded-md" %>
+        <button type="button"
+                class="absolute top-0 right-0 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs"
+                onclick="removeImage(this, <%= image.id %>)">
+          ×
+        </button>
+        <%= check_box_tag "remove_images[]", image.id, false, class: "hidden" %>
+      </div>
+    <% end %>
   </div>
+<% end %>
 
   <div class="my-5">
     <%= form.label :category_id %>
@@ -55,3 +62,13 @@
     <%= form.submit class: "w-full sm:w-auto rounded-md px-3.5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white inline-block font-medium cursor-pointer" %>
   </div>
 <% end %>
+
+
+<script>
+  function removeImage(button, imageId) {
+    const container = button.closest("[data-image-id]");
+    const checkbox = container.querySelector('input[type="checkbox"]');
+    checkbox.checked = true; 
+    container.style.display = "none";
+  }
+</script>

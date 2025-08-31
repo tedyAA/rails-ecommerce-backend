@@ -35,19 +35,28 @@ class Admin::ProductsController < AdminController
   end
 
   # PATCH/PUT /admin/products/1 or /admin/products/1.json
-  def update
-    @admin_product = Product.find(params[:id])
-    if @admin_product.update(admin_product_params.reject { |k| k["images"] })
-      if admin_product_params["images"]
-        admin_product_params["images"].each do |image|
-          @admin_product.images.attach(image)
-        end
-      end
-      redirect_to admin_products_path, notice: "Product updated successfully"
-    else
-      render :edit, status: :unprocessable_entity
+def update
+  @admin_product = Product.find(params[:id])
+
+  if params[:remove_images]
+    params[:remove_images].each do |image_id|
+      image = @admin_product.images.find(image_id)
+      image.purge
     end
   end
+
+  if @admin_product.update(admin_product_params.except(:images))
+    if admin_product_params[:images]
+      admin_product_params[:images].each do |image|
+        @admin_product.images.attach(image)
+      end
+    end
+    redirect_to admin_products_path, notice: "Product updated successfully"
+  else
+    render :edit, status: :unprocessable_entity
+  end
+end
+
 
   # DELETE /admin/products/1 or /admin/products/1.json
   def destroy
