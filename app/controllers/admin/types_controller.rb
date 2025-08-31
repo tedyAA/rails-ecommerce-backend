@@ -1,4 +1,4 @@
-class Admin::TypesController < ApplicationController
+class Admin::TypesController < AdminController
   before_action :set_admin_type, only: %i[ show edit update destroy ]
 
   # GET /admin/types or /admin/types.json
