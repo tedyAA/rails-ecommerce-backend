@@ -20,12 +20,12 @@ class Admin::TypesController < AdminController
   end
 
   # POST /admin/types or /admin/types.json
-  def create
+ def create
     @admin_type = Type.new(admin_type_params)
 
     respond_to do |format|
       if @admin_type.save
-        format.html { redirect_to @admin_type, notice: "Type was successfully created." }
+        format.html { redirect_to admin_type_url(@admin_type), notice: "Type was successfully created." }
         format.json { render :show, status: :created, location: @admin_type }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class Admin::TypesController < AdminController
   def update
     respond_to do |format|
       if @admin_type.update(admin_type_params)
-        format.html { redirect_to @admin_type, notice: "Type was successfully updated.", status: :see_other }
+        format.html { redirect_to admin_type_url(@admin_type), notice: "Type was successfully updated." }
         format.json { render :show, status: :ok, location: @admin_type }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -65,6 +65,6 @@ class Admin::TypesController < AdminController
 
     # Only allow a list of trusted parameters through.
     def admin_type_params
-      params.require(:admin_type).permit(:name, :description)
+      params.require(:type).permit(:name, :description)
     end
 end
