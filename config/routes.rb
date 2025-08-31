@@ -19,4 +19,8 @@ Rails.application.routes.draw do
   end
 
   get "admin" => "admin#index"
+# API
+  namespace :api do
+    resources :products, only: [:index, :show]
+  end
 end
