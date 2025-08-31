@@ -65,6 +65,6 @@ class Admin::TypesController < AdminController
 
     # Only allow a list of trusted parameters through.
     def admin_type_params
-      params.require(:type).permit(:name, :description)
+      params.require(:type).permit(:name, :description, :image)
     end
 end
