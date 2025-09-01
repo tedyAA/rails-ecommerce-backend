@@ -22,5 +22,7 @@ Rails.application.routes.draw do
 # API
   namespace :api do
     resources :products, only: [:index, :show]
+    resources :types, only: [:index]
+    resources :categories, only: [:index]
   end
 end
