@@ -1,21 +1,20 @@
 module Api
   class ProductsController < ApplicationController
-    include Rails.application.routes.url_helpers  # Needed for url_for
+    include Rails.application.routes.url_helpers
 
     def index
-      products = Product.includes(:category, :type, images_attachments: :blob).all
-      products = products.where(bestseller: true) if params[:bestseller] == "true"
+      products = Product.includes(:category, :type, images_attachments: :blob)
 
-       if params[:per].present?
-        per = params[:per].to_i
-        products = products.limit(per) if per > 0
-       end
+      products = products.where(bestseller: params[:bestseller] == "true") if params[:bestseller].present?
+      products = products.where(category_id: params[:category].split(',').map(&:to_i)) if params[:category].present?
+      products = products.where(type_id: params[:type].split(',').map(&:to_i)) if params[:type].present?
+      products = products.limit(params[:per].to_i) if params[:per].present? && params[:per].to_i > 0
 
       render json: products.map { |product|
         product_attributes = product.attributes
         product_attributes[:category] = product.category
         product_attributes[:type] = product.type
-        product_attributes[:image_urls] = product.images.map { |img| url_for(img) } # multiple images
+        product_attributes[:image_urls] = product.images.map { |img| url_for(img) }
         product_attributes
       }
     end
@@ -25,7 +24,7 @@ module Api
       if product
         product_attributes = product.attributes
         product_attributes[:category] = product.category
-        product_attributes[:image_urls] = product.images.map { |img| url_for(img) } # multiple images
+        product_attributes[:image_urls] = product.images.map { |img| url_for(img) }
         render json: product_attributes
       else
         render json: { error: "Product not found" }, status: :not_found
