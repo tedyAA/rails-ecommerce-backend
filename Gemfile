@@ -77,3 +77,5 @@ gem 'font-awesome-sass', '~> 6.2.0'
 gem 'rack-cors'
 
 gem "stripe", "~> 15.4"
+
+gem 'jwt'
