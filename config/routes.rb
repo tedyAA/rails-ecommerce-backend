@@ -27,5 +27,7 @@ Rails.application.routes.draw do
 
     resources :users, only: [:create]
     post 'login', to: 'sessions#create'
+    get '/current_user', to: 'users#current'
+    patch 'users/update_avatar', to: 'users#update_avatar'
   end
 end
