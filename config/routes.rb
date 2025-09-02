@@ -24,5 +24,8 @@ Rails.application.routes.draw do
     resources :products, only: [:index, :show]
     resources :types, only: [:index]
     resources :categories, only: [:index]
+
+    resources :users, only: [:create]
+    post 'login', to: 'sessions#create'
   end
 end
