@@ -9,6 +9,10 @@ module Api
       products = products.where(category_id: params[:category].split(',').map(&:to_i)) if params[:category].present?
       products = products.where(type_id: params[:type].split(',').map(&:to_i)) if params[:type].present?
       products = products.limit(params[:per].to_i) if params[:per].present? && params[:per].to_i > 0
+      if params[:term].present?
+       term = params[:term].downcase
+       products = products.where("LOWER(name) LIKE ?", "%#{term}%")
+      end
 
       render json: products.map { |product|
         product_attributes = product.attributes
