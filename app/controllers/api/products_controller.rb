@@ -14,6 +14,10 @@ module Api
        products = products.where("LOWER(name) LIKE ?", "%#{term}%")
       end
 
+      if params[:random] == "true"
+        products = products.order(Arel.sql('RANDOM()')) # Use RAND() for MySQL
+      end
+
       render json: products.map { |product|
         product_attributes = product.attributes
         product_attributes[:category] = product.category
