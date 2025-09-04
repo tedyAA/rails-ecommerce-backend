@@ -79,3 +79,5 @@ gem 'rack-cors'
 gem "stripe", "~> 15.4"
 
 gem 'jwt'
+
+gem 'kaminari'
