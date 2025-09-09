@@ -29,8 +29,6 @@
                   ID
                 </th>
                 <th scope="col" class="text-sm font-medium text-gray-800 px-6 py-4 text-left">
-                </th>
-                <th scope="col" class="text-sm font-medium text-gray-800 px-6 py-4 text-left">
                   Name
                 </th>
                 <th scope="col" class="text-sm font-medium text-gray-800 px-6 py-4 text-left">
@@ -49,9 +47,6 @@
                 <tr class="bg-gray-50 border-b">
                   <td class="px-6 py-4 whitepsace-nowrap tex-sm font-medium text-gray-800 underline">
                     <%= p.id %>
-                  </td>
-                  <td class="px-6 py-4 whitepsace-nowrap tex-sm font-medium text-gray-800 underline">
-                    <%= link_to p.images.any? ? image_tag(p.images.first.variant(:thumb)) : image_tag("https://placehold.co/50x50"), edit_admin_product_path(p) %>
                   </td>
                   <td class="px-6 py-4 whitepsace-nowrap tex-sm font-medium text-gray-800 underline">
                     <%= link_to p.name, edit_admin_product_path(p) %>
