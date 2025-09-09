@@ -1,0 +1,307 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Men",
+      "description": null,
+      "created_at": "2025-09-08 13:44:55 UTC",
+      "updated_at": "2025-09-08 13:44:55 UTC"
+    },
+    {
+      "id": 2,
+      "name": "Women",
+      "description": null,
+      "created_at": "2025-09-08 13:44:55 UTC",
+      "updated_at": "2025-09-08 13:44:55 UTC"
+    },
+    {
+      "id": 3,
+      "name": "Kids",
+      "description": null,
+      "created_at": "2025-09-08 13:44:55 UTC",
+      "updated_at": "2025-09-08 13:44:55 UTC"
+    }
+  ],
+  "types": [
+    {
+      "id": 1,
+      "name": "topwear",
+      "description": null,
+      "created_at": "2025-09-08 13:44:55 UTC",
+      "updated_at": "2025-09-08 13:44:55 UTC"
+    },
+    {
+      "id": 2,
+      "name": "bottomwear",
+      "description": null,
+      "created_at": "2025-09-08 13:44:55 UTC",
+      "updated_at": "2025-09-08 13:44:55 UTC"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Women's Aqua-colored Polo",
+      "description": "Designed for both style and performance, this aqua-colored crop polo is made from vertical knit fabric for a sleek, breathable feel. Featuring dye-to-match buttons and a reflective heat transfer label, it blends functionality with a modern edge. The regular fit offers a comfortable yet flattering silhouette, making it perfect for active and casual wear.",
+      "price": 55000,
+      "category_id": 2,
+      "type_id": 1,
+      "bestseller": true,
+      "created_at": "2025-09-08 13:47:32 UTC",
+      "updated_at": "2025-09-09 08:47:03 UTC"
+    },
+    {
+      "id": 2,
+      "name": "Women's Knitted Polo",
+      "description": "Crafted from double knit fabric, this sky-colored polo offers a perfect blend of comfort and durability. The contrast piping on the side panel adds a sporty edge, while dye-to-match buttons and a reflective heat transfer label enhance the sleek design. With its regular fit, this polo is ideal for both active and casual wear.",
+      "price": 60000,
+      "category_id": 2,
+      "type_id": 1,
+      "bestseller": false,
+      "created_at": "2025-09-08 13:47:32 UTC",
+      "updated_at": "2025-09-09 08:43:14 UTC"
+    },
+    {
+      "id": 3,
+      "name": "Women T-shirt",
+      "description": "This drop shoulder Lee t-shirt is a must-have for your casualwear collection. Made from 100% cotton, it features a boxy crop fit and a logo graphic print that will make you stand out. Wear it with skinny jeans, perfect for a day out with friends or a night out with your partner.",
+      "price": 49000,
+      "category_id": 2,
+      "type_id": 1,
+      "bestseller": false,
+      "created_at": "2025-09-08 13:47:32 UTC",
+      "updated_at": "2025-09-08 13:47:32 UTC"
+    },
+    {
+      "id": 4,
+      "name": "Women Yellow T-shirt",
+      "description": "This yellow t-shirt from Lee is a unique option to add to your casualwear collection. Made from 100% cotton, it is soft and comfortable to wear. The boxy crop design and short, drop shoulder sleeves give it a trendy look. Team it up with denim shorts and sandals for a beachy vibe.",
+      "price": 34000,
+      "category_id": 2,
+      "type_id": 1,
+      "bestseller": false,
+      "created_at": "2025-09-08 13:47:32 UTC",
+      "updated_at": "2025-09-09 08:45:24 UTC"
+    },
+    {
+      "id": 5,
+      "name": "Men Polo",
+      "description": "lorem ipsum",
+      "price": 45000,
+      "category_id": 1,
+      "type_id": 1,
+      "bestseller": true,
+      "created_at": "2025-09-08 13:47:32 UTC",
+      "updated_at": "2025-09-08 13:47:32 UTC"
+    },
+    {
+      "id": 6,
+      "name": "Men Knitted Polo",
+      "description": "Lorem ipsum",
+      "price": 39000,
+      "category_id": 1,
+      "type_id": 1,
+      "bestseller": false,
+      "created_at": "2025-09-08 13:47:32 UTC",
+      "updated_at": "2025-09-09 08:45:36 UTC"
+    },
+    {
+      "id": 7,
+      "name": "Men Red T-shirt",
+      "description": "Lorem ipsum",
+      "price": 60000,
+      "category_id": 1,
+      "type_id": 1,
+      "bestseller": true,
+      "created_at": "2025-09-08 13:47:32 UTC",
+      "updated_at": "2025-09-09 08:45:48 UTC"
+    },
+    {
+      "id": 8,
+      "name": "Men T-shirt",
+      "description": "Lorem ipsun",
+      "price": 5000,
+      "category_id": 1,
+      "type_id": 1,
+      "bestseller": true,
+      "created_at": "2025-09-08 13:47:32 UTC",
+      "updated_at": "2025-09-08 13:47:32 UTC"
+    },
+    {
+      "id": 9,
+      "name": "Kids' Basketball Sequin Sweatshirt",
+      "description": "Let your little athlete shine with this stylish basketball-themed sweatshirt! Featuring a fun sequin design of a basketball hoop and ball, this sweatshirt is perfect for young sports lovers. Made from a soft and breathable fabric, it ensures comfort while keeping them warm during chilly days. The ribbed cuffs and hem provide a snug fit, making it ideal for active kids.",
+      "price": 45000,
+      "category_id": 3,
+      "type_id": 1,
+      "bestseller": true,
+      "created_at": "2025-09-08 13:47:32 UTC",
+      "updated_at": "2025-09-08 13:47:32 UTC"
+    },
+    {
+      "id": 10,
+      "name": "Mickey Mouse Sweatshirt",
+      "description": "Let your little one show off their confidence with this stylish Mickey Mouse sweatshirt! Featuring a bold graphic print with the phrase \"I MAKE AWESOME LOOK EASY\", this sweatshirt is perfect for kids who love to stand out. Designed in a vibrant red color, it adds a fun and energetic vibe to any outfit. The soft, cozy fabric ensures all-day comfort, making it ideal for everyday wear, school, or casual outings. A must-have for Disney and Mickey Mouse fans! 🔥✨",
+      "price": 32000,
+      "category_id": 3,
+      "type_id": 1,
+      "bestseller": false,
+      "created_at": "2025-09-08 13:47:32 UTC",
+      "updated_at": "2025-09-08 13:47:32 UTC"
+    },
+    {
+      "id": 11,
+      "name": "Paw Patrol \"Good Vibes\" Long-Sleeve Kids' T-Shirt",
+      "description": "Make every day fun and stylish with this adorable Paw Patrol long-sleeve T-shirt! Featuring Skye and Everest with a \"Good Vibes\" design, this tee is perfect for little fans of the beloved animated series.",
+      "price": 29000,
+      "category_id": 3,
+      "type_id": 1,
+      "bestseller": false,
+      "created_at": "2025-09-08 13:47:32 UTC",
+      "updated_at": "2025-09-08 13:47:32 UTC"
+    },
+    {
+      "id": 12,
+      "name": "Mickey Mouse Winter-Themed Kids’ T-Shirt",
+      "description": "Keep your little one cozy and stylish with this adorable Mickey Mouse winter-themed T-shirt! Featuring a cheerful Mickey in a warm scarf, alongside snow-covered trees, this T-shirt is perfect for chilly days.",
+      "price": 59000,
+      "category_id": 3,
+      "type_id": 1,
+      "bestseller": false,
+      "created_at": "2025-09-08 13:47:32 UTC",
+      "updated_at": "2025-09-08 13:47:32 UTC"
+    },
+    {
+      "id": 13,
+      "name": "Men Pants",
+      "description": "Very comfortable,  very strechy sport pants.Very comfortable,  very strechy sport pants.Very comfortable,  very strechy sport pants.Very comfortable,  very strechy sport pants.Very comfortable,  very strechy sport pants.Very comfortable,  very strechy sport pants",
+      "price": 45000,
+      "category_id": 1,
+      "type_id": 2,
+      "bestseller": true,
+      "created_at": "2025-09-08 13:47:32 UTC",
+      "updated_at": "2025-09-08 13:47:32 UTC"
+    },
+    {
+      "id": 14,
+      "name": "Utility Relaxed Fit Cargo Pant - Slate Grey",
+      "description": "Introducing our Relaxed Fit Cargo Pants, designed for ultimate comfort and functionality. Featuring an elastic waist, these pants provide a flexible fit that adapts to your movements, making them perfect for everyday wear. The mid-rise cut offers a modern silhouette, while the regular length ensures versatility for any occasion.",
+      "price": 32000,
+      "category_id": 1,
+      "type_id": 2,
+      "bestseller": false,
+      "created_at": "2025-09-08 13:47:32 UTC",
+      "updated_at": "2025-09-08 13:47:32 UTC"
+    },
+    {
+      "id": 15,
+      "name": "Cream Corduroy Trousers",
+      "description": "Elevate your wardrobe with these cream corduroy trousers, designed for both comfort and style. The relaxed fit and midrise waist provide a flattering silhouette, while the fixed waist ensures a secure fit. Crafted from soft corduroy, these trousers feature a classic solid pattern and a regular length for versatile wear.",
+      "price": 45000,
+      "category_id": 1,
+      "type_id": 2,
+      "bestseller": false,
+      "created_at": "2025-09-08 13:47:32 UTC",
+      "updated_at": "2025-09-08 13:47:32 UTC"
+    },
+    {
+      "id": 16,
+      "name": "Mirage Sports shorts",
+      "description": "Experience the perfect blend of performance and comfort in our men's sports shorts, a must-have for active individuals.Experience the perfect blend of performance and comfort in our men's sports shorts, a must-have for active individuals.",
+      "price": 90000,
+      "category_id": 1,
+      "type_id": 2,
+      "bestseller": false,
+      "created_at": "2025-09-08 13:47:32 UTC",
+      "updated_at": "2025-09-08 13:47:32 UTC"
+    },
+    {
+      "id": 17,
+      "name": "R&B Women's Solid Jeggings",
+      "description": "women bottomwear,women bottomwear,women bottomwear,women bottomwear,women bottomwear. women bottomwear",
+      "price": 43999,
+      "category_id": 2,
+      "type_id": 2,
+      "bestseller": false,
+      "created_at": "2025-09-08 13:47:32 UTC",
+      "updated_at": "2025-09-08 13:47:32 UTC"
+    },
+    {
+      "id": 18,
+      "name": "R&B Women's Solid Pants",
+      "description": "R&B Women's Solid Track PantsR&B Women's Solid Track PantsR&B Women's Solid Track PantsR&B Women's Solid Track PantsR&B Women's Solid Track PantsR&B Women's Solid Track Pants",
+      "price": 87000,
+      "category_id": 2,
+      "type_id": 2,
+      "bestseller": false,
+      "created_at": "2025-09-08 13:47:32 UTC",
+      "updated_at": "2025-09-09 08:48:50 UTC"
+    },
+    {
+      "id": 19,
+      "name": "R&B Women's Solid Track Pants",
+      "description": "R&B Women's Solid Track PantsR&B Women's Solid Track PantsR&B Women's Solid Track PantsR&B Women's Solid Track PantsR&B Women's Solid Track Pants",
+      "price": 21000,
+      "category_id": 2,
+      "type_id": 2,
+      "bestseller": false,
+      "created_at": "2025-09-08 13:47:32 UTC",
+      "updated_at": "2025-09-08 13:47:32 UTC"
+    },
+    {
+      "id": 20,
+      "name": "R&B Women Pants & Trousers",
+      "description": "R&B Women Pants & TrousersR&B Women Pants & TrousersR&B Women Pants & TrousersR&B Women Pants & TrousersR&B Women Pants & Trousers",
+      "price": 56000,
+      "category_id": 2,
+      "type_id": 2,
+      "bestseller": false,
+      "created_at": "2025-09-08 13:47:32 UTC",
+      "updated_at": "2025-09-08 13:47:32 UTC"
+    },
+    {
+      "id": 21,
+      "name": "R&B Boys Solid Shorts",
+      "description": "R&B Boys Solid ShortsR&B Boys Solid ShortsR&B Boys Solid ShortsR&B Boys Solid ShortsR&B Boys Solid ShortsR&B Boys Solid Shorts",
+      "price": 34000,
+      "category_id": 3,
+      "type_id": 2,
+      "bestseller": false,
+      "created_at": "2025-09-08 13:47:32 UTC",
+      "updated_at": "2025-09-08 13:47:32 UTC"
+    },
+    {
+      "id": 22,
+      "name": "Three Fourth For Baby Boys",
+      "description": "Three Fourth For Baby BoysThree Fourth For Baby BoysThree Fourth For Baby BoysThree Fourth For Baby BoysThree Fourth For Baby BoysThree Fourth For Baby BoysThree Fourth For Baby Boys",
+      "price": 21000,
+      "category_id": 3,
+      "type_id": 2,
+      "bestseller": false,
+      "created_at": "2025-09-08 13:47:32 UTC",
+      "updated_at": "2025-09-08 13:47:32 UTC"
+    },
+    {
+      "id": 23,
+      "name": "Short For Girls Casual Floral Print Cotton",
+      "description": "Short For Girls Casual Floral Print Pure CottonShort For Girls Casual Floral Print Pure CottonShort For Girls Casual Floral Print Pure CottonShort For Girls Casual Floral Print Pure CottonShort For Girls Casual Floral Print Pure Cotton",
+      "price": 34000,
+      "category_id": 3,
+      "type_id": 2,
+      "bestseller": false,
+      "created_at": "2025-09-08 13:47:32 UTC",
+      "updated_at": "2025-09-09 08:49:04 UTC"
+    },
+    {
+      "id": 24,
+      "name": "Short For Girls Casual Floral Print Pure Cotton",
+      "description": "Short For Girls Casual Floral Print Pure CottonShort For Girls Casual Floral Print Pure CottonShort For Girls Casual Floral Print Pure CottonShort For Girls Casual Floral Print Pure CottonShort For Girls Casual Floral Print Pure Cotton",
+      "price": 22000,
+      "category_id": 3,
+      "type_id": 2,
+      "bestseller": false,
+      "created_at": "2025-09-08 13:47:32 UTC",
+      "updated_at": "2025-09-08 13:47:32 UTC"
+    }
+  ]
+}
