@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  namespace :api do
+    get 'cart_items/create'
+    get 'cart_items/update'
+    get 'cart_items/destroy'
+    get 'carts/show'
+  end
   namespace :admin do
     resources :products
     resources :types
@@ -24,6 +30,9 @@ Rails.application.routes.draw do
     resources :products, only: [:index, :show]
     resources :types, only: [:index]
     resources :categories, only: [:index]
+
+    resources :carts, only: [:show]
+    resources :cart_items, only: [:create, :update, :destroy]
 
     resources :users, only: [:create]
     post 'login', to: 'sessions#create'
