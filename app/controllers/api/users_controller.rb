@@ -5,13 +5,15 @@ module Api
 
    before_action :authenticate_user!, only: [:current]
 
-    def current
-  return render json: { error: "Not authenticated" }, status: :unauthorized unless current_user
+def current
+  
+  authenticate_user! # Will automatically render 401 if not logged in
 
   render json: current_user.slice(:id, :first_name, :last_name, :email).merge(
     avatar_url: current_user.avatar.attached? ? url_for(current_user.avatar) : nil
   )
 end
+
 
     def create
       user = User.new(user_params)
