@@ -1,18 +1,18 @@
 # app/controllers/api/users_controller.rb
 module Api
   class UsersController < ApplicationController
-    skip_before_action :verify_authenticity_token
 
    before_action :authenticate_user!, only: [:current]
 
 def current
-  
   authenticate_user! # Will automatically render 401 if not logged in
 
   render json: current_user.slice(:id, :first_name, :last_name, :email).merge(
-    avatar_url: current_user.avatar.attached? ? url_for(current_user.avatar) : nil
+    avatar_url: current_user.avatar.attached? ? url_for(current_user.avatar) : nil,
+    cart_id: current_user.cart&.id
   )
 end
+
 
 
     def create

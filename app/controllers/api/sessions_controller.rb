@@ -1,6 +1,6 @@
 module Api
   class SessionsController < ApplicationController
-    skip_before_action :verify_authenticity_token
+    # skip_before_action :verify_authenticity_token
 
     def create
       user = User.find_by(email: params[:email])
@@ -18,6 +18,6 @@ module Api
   payload = { user_id: user_id, exp: 24.hours.from_now.to_i }
   secret  = Rails.application.credentials.secret_key_base
   JWT.encode(payload, secret, "HS256")
-end
+    end
   end
 end
