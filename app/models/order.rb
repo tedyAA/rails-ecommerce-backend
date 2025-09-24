@@ -10,6 +10,10 @@ class Order < ApplicationRecord
     update!(total_cents: order_items.sum("quantity * price_cents"))
   end
 
+   STATUSES = %w[pending shipped delivered canceled]
+
+  validates :status, inclusion: { in: STATUSES }
+
   private
 
   def set_default_status
