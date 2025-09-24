@@ -35,6 +35,8 @@ Rails.application.routes.draw do
     resources :carts, only: [:show]
     resources :cart_items, only: [:create, :update, :destroy]
 
+    resources :orders, only: [:create, :show, :index]
+
     resources :users, only: [:create]
     post 'login', to: 'sessions#create'
     get '/current_user', to: 'users#current'
