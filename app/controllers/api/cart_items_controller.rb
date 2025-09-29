@@ -14,10 +14,19 @@ module Api
     end
 
     def update
-      cart_item = current_user.cart.cart_items.find(params[:id])
-      cart_item.update!(quantity: params[:quantity])
-      render json: cart_item, include: :product
-    end
+  cart_item = current_user.cart.cart_items.find(params[:id])
+  
+  quantity = params[:cart_item][:quantity].to_i  # convert to integer
+
+  if quantity <= 0
+    cart_item.destroy
+    return head :no_content
+  end
+
+  cart_item.update!(quantity: quantity)
+  render json: cart_item, include: :product
+end
+
 
     def destroy
       cart_item = current_user.cart.cart_items.find(params[:id])
