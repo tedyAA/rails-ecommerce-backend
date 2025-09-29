@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-
+protect_from_forgery with: :null_session
   def authenticate_user!
     unless current_user
       render json: { error: "Not authenticated" }, status: :unauthorized

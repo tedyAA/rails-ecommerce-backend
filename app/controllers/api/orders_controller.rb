@@ -1,6 +1,12 @@
 module Api
   class OrdersController < ApplicationController
     before_action :authenticate_user!
+    skip_before_action :verify_authenticity_token, only: [:create]
+
+    def index
+      orders = current_user.orders.order(created_at: :desc)
+      render json: orders.map { |order| order_as_json(order) }
+    end
 
     def create
       ActiveRecord::Base.transaction do

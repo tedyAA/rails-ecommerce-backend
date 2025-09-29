@@ -1,6 +1,6 @@
 module Api
   class CartItemsController < ApplicationController
-    before_action :authenticate_user!
+     skip_before_action :verify_authenticity_token
 
     def create
       cart = current_user.cart || current_user.create_cart
