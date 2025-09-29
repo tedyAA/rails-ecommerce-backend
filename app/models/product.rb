@@ -8,4 +8,12 @@ class Product < ApplicationRecord
   
   belongs_to :category
   belongs_to :type
+
+  def image_urls
+    return [] unless images.attached?
+
+    images.map do |img|
+      Rails.application.routes.url_helpers.url_for(img)
+    end
+  end
 end

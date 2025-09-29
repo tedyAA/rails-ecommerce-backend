@@ -1,5 +1,6 @@
 module Api
   class CartsController < ApplicationController
+    include Rails.application.routes.url_helpers
     before_action :authenticate_user!
 
     def show
@@ -8,7 +9,11 @@ module Api
       render json: cart.as_json(
         include: {
           cart_items: {
-            include: :product
+            include: {
+              product: {
+                methods: [:image_urls]
+              }
+            }
           }
         }
       )
