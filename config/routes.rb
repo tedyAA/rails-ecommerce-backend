@@ -38,7 +38,7 @@ Rails.application.routes.draw do
 
     resources :orders, only: [:create, :show, :index]
 
-    resources :users, only: [:create]
+    resources :users, only: [:create, :update]
     post 'login', to: 'sessions#create'
     get '/current_user', to: 'users#current'
     patch 'users/update_avatar', to: 'users#update_avatar'

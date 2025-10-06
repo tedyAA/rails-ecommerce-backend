@@ -1,19 +1,13 @@
-# app/controllers/api/users_controller.rb
 module Api
   class UsersController < ApplicationController
+    before_action :authenticate_user!, only: [:current, :update]
 
-   before_action :authenticate_user!, only: [:current]
-
-def current
-  authenticate_user! # Will automatically render 401 if not logged in
-
-  render json: current_user.slice(:id, :first_name, :last_name, :email).merge(
-    avatar_url: current_user.avatar.attached? ? url_for(current_user.avatar) : nil,
-    cart_id: current_user.cart&.id
-  )
-end
-
-
+    def current
+      render json: current_user.slice(:id, :first_name, :last_name, :email, :phone).merge(
+        avatar_url: current_user.avatar.attached? ? url_for(current_user.avatar) : nil,
+        cart_id: current_user.cart&.id
+      )
+    end
 
     def create
       user = User.new(user_params)
@@ -24,13 +18,21 @@ end
       end
     end
 
-   def update_avatar
-    if current_user.update(avatar: params[:avatar])
-      render json: { message: "Avatar updated", avatar_url: url_for(current_user.avatar) }
-    else
-      render json: { error: "Failed to update avatar" }, status: :unprocessable_entity
+    def update
+      if current_user.update(user_params)
+        render json: { user: current_user, message: "✅ Account updated successfully" }, status: :ok
+      else
+        render json: { errors: current_user.errors.full_messages }, status: :unprocessable_entity
+      end
     end
-   end
+
+    def update_avatar
+      if current_user.update(avatar: params[:avatar])
+        render json: { message: "Avatar updated", avatar_url: url_for(current_user.avatar) }
+      else
+        render json: { error: "Failed to update avatar" }, status: :unprocessable_entity
+      end
+    end
 
     private
 
