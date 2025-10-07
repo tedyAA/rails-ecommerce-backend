@@ -81,3 +81,5 @@ gem "stripe", "~> 15.4"
 gem 'jwt'
 
 gem 'kaminari'
+
+gem "tailwindcss-ruby", "~> 4.1"

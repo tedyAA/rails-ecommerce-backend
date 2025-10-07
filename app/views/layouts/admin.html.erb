@@ -21,7 +21,7 @@
           </div>
           <ul class="flex flex-col text-white">
             <li>
-              <%= link_to admin_path, class: "block px-4 py-2 hover:rounded hover:bg-gray-700" do %>
+              <%= link_to admin_dashboard_index_path, class: "block px-4 py-2 hover:rounded hover:bg-gray-700" do %>
                 <%= icon('fa-solid', 'gauge-high', class: 'mr-2') %> <span class=" md:inline-block">Dashboard</span>
               <% end %>
             </li>
@@ -35,11 +35,7 @@
                 <%= icon('fa-solid', 'list', class: 'mr-2') %> <span class=" md:inline-block">Types</span>
               <% end %>
             </li>
-            <li>
-              <%= link_to admin_path, class: "block px-4 py-2 hover:rounded hover:bg-gray-700" do %>
-                <%= icon('fa-solid', 'truck-fast', class: 'mr-2') %> <span class=" md:inline-block">Orders</span>
-              <% end %>
-            </li>
+          
             <li>
               <%= link_to admin_users_path, class: "block px-4 py-2 hover:rounded hover:bg-gray-700" do %>
                 <%= icon('fa-solid', 'list', class: 'mr-2') %> <span class=" md:inline-block">Users</span>

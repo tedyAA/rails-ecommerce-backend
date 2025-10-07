@@ -359,6 +359,7 @@ DEPENDENCIES
   stimulus-rails
   stripe (~> 15.4)
   tailwindcss-rails
+  tailwindcss-ruby (~> 4.1)
   turbo-rails
   tzinfo-data
   web-console

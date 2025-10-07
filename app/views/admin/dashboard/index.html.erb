@@ -1,0 +1,82 @@
+<div class="w-full p-6">
+  <h1 class="text-4xl font-bold text-gray-900 mb-10 flex items-center gap-2">
+    📊 Dashboard
+  </h1>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6">
+    <!-- Total Orders -->
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition group">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-sm text-gray-500 font-medium">Total Orders</h2>
+          <p class="text-3xl font-bold text-gray-900 mt-2"><%= @total_orders %></p>
+        </div>
+        <div class="bg-indigo-100 text-indigo-600 p-3 rounded-xl group-hover:scale-110 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18l-1.5 13.5a3 3 0 01-3 2.5H7.5a3 3 0 01-3-2.5L3 3z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Total Items Ordered -->
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition group">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-sm text-gray-500 font-medium">Total Items Ordered</h2>
+          <p class="text-3xl font-bold text-gray-900 mt-2"><%= @total_items_ordered %></p>
+        </div>
+        <div class="bg-blue-100 text-blue-600 p-3 rounded-xl group-hover:scale-110 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Total Users -->
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition group">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-sm text-gray-500 font-medium">Total Users</h2>
+          <p class="text-3xl font-bold text-gray-900 mt-2"><%= @total_users %></p>
+        </div>
+        <div class="bg-green-100 text-green-600 p-3 rounded-xl group-hover:scale-110 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A5.002 5.002 0 0110 15h4a5.002 5.002 0 014.879 2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- New Users This Week -->
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition group">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-sm text-gray-500 font-medium">New Users This Week</h2>
+          <p class="text-3xl font-bold text-gray-900 mt-2"><%= @users_this_week %></p>
+        </div>
+        <div class="bg-purple-100 text-purple-600 p-3 rounded-xl group-hover:scale-110 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- 💰 Total Revenue -->
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition group">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-sm text-gray-500 font-medium">Total Revenue</h2>
+          <p class="text-3xl font-bold text-gray-900 mt-2">$<%= number_with_precision(@total_revenue, precision: 2, delimiter: ',') %></p>
+        </div>
+        <div class="bg-yellow-100 text-yellow-600 p-3 rounded-xl group-hover:scale-110 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-10v10" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

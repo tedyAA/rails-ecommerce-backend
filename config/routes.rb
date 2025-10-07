@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :categories
     resources :users
     resources :orders
+    resources :dashboard
   end
   devise_for :admins
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -23,7 +24,7 @@ Rails.application.routes.draw do
   root "home#index"
 
   authenticated :admin_user do
-    root to: "admin#index", as: :admin_root
+    root to: "dashboard#index", as: :admin_root
   end
 
   get "admin" => "admin#index"
